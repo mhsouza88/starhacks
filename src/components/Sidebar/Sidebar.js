@@ -10,7 +10,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 import { styled } from '@mui/system'
 
 const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
-    '&.Mui-selected, &.css-18gz5c0-MuiButtonBase-root-MuiBottomNavigationAction-root': {
+    '&.MuiButtonBase-root, &.MuiBottomNavigationAction-root, &.Mui-selected, &.css-1j0e2m0-MuiButtonBase-root-MuiBottomNavigationAction-root': {
       color: '#FFFFFF'
     }
   }))

@@ -4,6 +4,7 @@ export const Container = styledComponents.div `
     display: flex;
     flex-direction: row;
     width: 100vw;
+    margin-left: 2rem;
 `
 
 export const WomenSidebarContainer = styledComponents.div `
