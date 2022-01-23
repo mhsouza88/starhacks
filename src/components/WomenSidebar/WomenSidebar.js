@@ -4,6 +4,7 @@ import Link from '@mui/material/Link'
 import { useState } from 'react'
 import BASE_URL from '../../constants/Url'
 import { useRequestData } from '../../hooks/useRequestData'
+import { withTheme } from 'styled-components'
 
 export const WomenSidebar = (props) => {
     const [getWoman, setGetWoman] = useState([])
@@ -17,22 +18,23 @@ export const WomenSidebar = (props) => {
 
     const finalList = list.map((l) => {
         return (
-            <div><C.ContainerTitleAndImage>
-            <C.Avatar>
-                <img src={l.image_path} width={l.image_width} alt="Avatar" title="Avatar"/>
-                <C.Title>{l.name}</C.Title>
-            </C.Avatar>
-            </C.ContainerTitleAndImage>
-            <C.Description>
-                <Typography variant="body2" gutterBottom component="div">
-                    {l.details}
-                </Typography>
-                <C.LinkToTheirPage>
-                <Link href={l.website} target="_blank" underline="none">
-                    {'More information'}
-                </Link>
-                </C.LinkToTheirPage>
-           </C.Description>
+            <div style={{"backgroundColor":"white", "marginBottom": "5rem", "padding":"3rem 3rem 0 3rem", "borderRadius":"35px", "boxShadow":"0 10px 40px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 50, 0.19)"}}>
+                <C.ContainerTitleAndImage>
+                    <C.Avatar>
+                        <img src={l.image_path} width={l.image_width} alt="Avatar" title="Avatar"/>
+                        <C.Title>{l.name}</C.Title>
+                    </C.Avatar>
+                </C.ContainerTitleAndImage>
+                <C.Description>
+                    <Typography variant="body2" gutterBottom component="div">
+                        {l.details}
+                    </Typography>
+                    <C.LinkToTheirPage>
+                        <Link href={l.website} target="_blank" underline="none">
+                            {'More information'}
+                        </Link>
+                    </C.LinkToTheirPage>
+                </C.Description>
            </div>
         )
     })
