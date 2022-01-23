@@ -38,6 +38,7 @@ export const Title = styledComponents.div `
     font-weight: 500;
     margin-left: 1rem;
     line-height: 1.7rem;
+    color: #2D1656;
 `
 
 export const Description = styledComponents.div `
@@ -46,6 +47,7 @@ export const Description = styledComponents.div `
     text-align: justify;
     margin-top: 1rem;
     margin-bottom: 5rem;
+    color: #0B080F;
 `
 
 export const LinkToTheirPage = styledComponents.div `
