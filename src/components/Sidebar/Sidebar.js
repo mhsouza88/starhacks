@@ -7,8 +7,6 @@ import Button from '@mui/material/Button'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
-
-=======
 import { styled } from '@mui/system'
 
 const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
@@ -19,11 +17,18 @@ const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
 
 export const Sidebar = () => {
     const [value, setValue] = React.useState(0)
+    const [email, setEmail] = React.useState("")
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios.post(url, {
-            email:value
+    const handleSubmit = (evt) => {
+        evt.preventDefault();
+        alert(`Submitting Email ${email}`)
+        fetch(`/members/?email=${email}`)
+        .then(response => response.json())
+        .then((data) => {
+            alert("Success", data)
+        })
+        .catch((error) => {
+            alert(error)
         })
     }
 
@@ -35,37 +40,16 @@ export const Sidebar = () => {
             </C.Avatar>
             </C.ContainerTitleAndImage>
             <C.Description>
-
-                <Typography
-                    variant="h6"
-                    gutterBottom
-
                 <Typography 
                     variant="h5" 
                     gutterBottom 
                     sx={{color: '#2D1656'}}
-
                     component="div">
                     Join our mailing list!
                 </Typography>
                 </C.Description>
                 <C.MailingList>
-
-                <form>
-                    <TextField
-                        id="outlined-basic"
-                        label="Your e-mail here"
-                        variant="outlined"
-                        type="email"
-                        size="small"
-                    />
-                    <Button
-                        variant="outlined"
-                        type="submit">
-                        Submit
-                    </Button>
-
-                <form>
+                <form onSubmit={handleSubmit}>
                 <TextField
                     id="outlined-basic" 
                     color="secondary"
@@ -74,6 +58,7 @@ export const Sidebar = () => {
                     type="email"
                     size="small"
                     sx={{borderColor: '#2D1656' }}
+                    onChange={(e)=>{setEmail(e.target.value)}}
                 />
                 <Button 
                     variant="outlined"
@@ -82,7 +67,6 @@ export const Sidebar = () => {
                     sx={{color: '#2D1656', borderColor: '#2D1656'}}>
                     Submit
                 </Button>
-
                 </form>
                 </C.MailingList>
                 <C.GithubContainer>
