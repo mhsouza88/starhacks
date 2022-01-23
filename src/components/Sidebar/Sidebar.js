@@ -22,15 +22,6 @@ export const Sidebar = () => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        alert(`Submitting Email ${email}`)
-        fetch(`/members/?email=${email}`)
-        .then(response => response.json())
-        .then((data) => {
-            alert("Success", data)
-        })
-        .catch((error) => {
-            alert(error)
-        })
         setInputLabel("Done!")
     }
 
