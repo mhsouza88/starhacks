@@ -7,7 +7,7 @@
  </p>
  
  <h2> ⚛️ﾠAbout</h2>
- <p>Group project developed during the <a href="https://www.starhacks.tech/" target="_blank">StarHacks II Hackathon</a>. Despite the gender gap and all obstacles in the technology field, we usually don’t even know the stories of the women pioneers in the computing world. That’s why we created Wired Women, a newsletter that provides users to learn the story of one woman in tech at a time and to empower them in the computing world. Wired Women displays a sample random story of life from a woman in tech, and asks for the user to write an email in order to receive a personalized email with a story of a woman in tech and a picture of her.
+ <p>Group project developed during the <a href="https://www.starhacks.tech/" target="_blank">StarHacks II Hackathon</a>. Despite the gender gap and all obstacles in the technology field, we usually don’t even know the stories of the women pioneers in the computing world. That’s why we created Wired Women, a newsletter that provides users to learn the story of one woman in tech at a time and to empower them in the computing world. Wired Women displays a sample random story of life from a woman in tech, and asks for the user to write an email in order to receive a personalized email with a story of a woman in tech and a picture of her. The JSON file in this project was developed by <a href="https://github.com/kinlane/women-in-tech" target="_blank">Kinlane</a>. 
 </p><br/>
  
  
