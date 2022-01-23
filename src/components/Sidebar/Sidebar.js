@@ -7,6 +7,8 @@ import Button from '@mui/material/Button'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
+
+=======
 import { styled } from '@mui/system'
 
 const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
@@ -17,6 +19,14 @@ const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
 
 export const Sidebar = () => {
     const [value, setValue] = React.useState(0)
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.post(url, {
+            email:value
+        })
+    }
+
     return (
         <C.Container>
             <C.ContainerTitleAndImage>
@@ -25,15 +35,36 @@ export const Sidebar = () => {
             </C.Avatar>
             </C.ContainerTitleAndImage>
             <C.Description>
+
+                <Typography
+                    variant="h6"
+                    gutterBottom
+
                 <Typography 
                     variant="h5" 
                     gutterBottom 
                     sx={{color: '#2D1656'}}
+
                     component="div">
                     Join our mailing list!
                 </Typography>
                 </C.Description>
                 <C.MailingList>
+
+                <form>
+                    <TextField
+                        id="outlined-basic"
+                        label="Your e-mail here"
+                        variant="outlined"
+                        type="email"
+                        size="small"
+                    />
+                    <Button
+                        variant="outlined"
+                        type="submit">
+                        Submit
+                    </Button>
+
                 <form>
                 <TextField
                     id="outlined-basic" 
@@ -51,6 +82,7 @@ export const Sidebar = () => {
                     sx={{color: '#2D1656', borderColor: '#2D1656'}}>
                     Submit
                 </Button>
+
                 </form>
                 </C.MailingList>
                 <C.GithubContainer>
