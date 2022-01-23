@@ -16,7 +16,6 @@ export const Avatar = styledComponents.div `
     
     img {
         border-radius: 10rem;
-        width: 12rem;
     }
 
     @media (max-width: 450px ) {
@@ -39,6 +38,7 @@ export const Title = styledComponents.div `
     font-weight: 500;
     margin-left: 1rem;
     line-height: 1.7rem;
+    color: #2D1656;
 `
 
 export const Description = styledComponents.div `
@@ -46,7 +46,8 @@ export const Description = styledComponents.div `
     flex-direction: column;
     text-align: justify;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    color: #0B080F;
 `
 
 export const LinkToTheirPage = styledComponents.div `
