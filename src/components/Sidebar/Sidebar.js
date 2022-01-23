@@ -7,8 +7,6 @@ import Button from '@mui/material/Button'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
-
-
 import { styled } from '@mui/system'
 
 const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
@@ -42,35 +40,33 @@ export const Sidebar = () => {
                 </C.Avatar>
             </C.ContainerTitleAndImage>
             <C.Description>
-                <Typography
-                    variant="h5"
-                    gutterBottom
+                <Typography 
+                    variant="h5" 
+                    gutterBottom 
                     sx={{color: '#2D1656'}}
-
-                    component="div" >
+                    component="div">
                     Join our mailing list!
                 </Typography>
-            </C.Description>
-            <C.MailingList>
+                </C.Description>
+                <C.MailingList>
                 <form onSubmit={handleSubmit}>
-                    <TextField
-                        id="outlined-basic"
-                        color="secondary"
-                        label="Your e-mail here"
-                        variant="outlined"
-                        type="email"
-                        style={{"height":"50px", "margin":"5px"}}
-                        sx={{borderColor: '#2D1656' }}
-                        onChange={(e)=>{setEmail(e.target.value)}}
-                    />
-                    <Button
-                        variant="outlined"
-                        color="secondary"
-                        type="submit"
-                        style={{"height":"55px", "margin":"5px"}}
-                        sx={{color: '#2D1656', borderColor: '#2D1656'}}>
-                        Submit
-                    </Button>
+                <TextField
+                    id="outlined-basic" 
+                    color="secondary"
+                    label="Your e-mail here" 
+                    variant="outlined"
+                    type="email"
+                    size="small"
+                    sx={{borderColor: '#2D1656' }}
+                    onChange={(e)=>{setEmail(e.target.value)}}
+                />
+                <Button 
+                    variant="outlined"
+                    color="secondary"
+                    type="submit"
+                    sx={{color: '#2D1656', borderColor: '#2D1656'}}>
+                    Submit
+                </Button>
                 </form>
             </C.MailingList>
             <C.GithubContainer>
