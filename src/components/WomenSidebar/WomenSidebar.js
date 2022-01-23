@@ -1,27 +1,45 @@
 import * as C from './styles'
-import Puppy from '../../assets/puppy.jpeg'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
+import { useState } from 'react'
+import BASE_URL from '../../constants/Url'
+import { useRequestData } from '../../hooks/useRequestData'
 
-export const WomenSidebar = () => {
-    return (
-        <C.Container>
-            <C.ContainerTitleAndImage>
+export const WomenSidebar = (props) => {
+    const [getWoman, setGetWoman] = useState([])
+
+    const list = useRequestData([], `${BASE_URL}`)
+
+    // const generate = (arr) => {
+    //     const index = Math.floor(Math.random() * arr.length)
+    //     return arr[index]
+    // }
+
+    const finalList = list.map((l) => {
+        return (
+            <div><C.ContainerTitleAndImage>
             <C.Avatar>
-                <img src={Puppy} alt="Avatar" title="Avatar"/>
-                <C.Title>[ Woman's name ] - Field of study</C.Title>
+                <img src={l.image_path} width={l.image_width} alt="Avatar" title="Avatar"/>
+                <C.Title>{l.name}</C.Title>
             </C.Avatar>
             </C.ContainerTitleAndImage>
             <C.Description>
                 <Typography variant="body2" gutterBottom component="div">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in pulvinar urna, nec rutrum leo. Praesent et arcu a magna maximus auctor a sit amet purus. Aenean ultricies mi ac massa sagittis dignissim. Pellentesque sodales varius justo sed eleifend. Nullam pharetra ac enim a vestibulum. Suspendisse ante erat, tincidunt interdum risus sed, accumsan interdum quam. Suspendisse vulputate, augue id ornare scelerisque, dolor arcu faucibus libero, vitae condimentum libero sem eget sem. Vivamus at ultrices lectus, ac molestie urna. Donec convallis pulvinar enim, non efficitur ex tristique a. Ut pulvinar ligula est, quis dignissim leo mattis vitae. Sed at blandit purus, auctor posuere augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut vitae placerat tortor.
+                    {l.details}
                 </Typography>
                 <C.LinkToTheirPage>
-                <Link href="#" underline="none">
-                    {'Link to Wikipedia'}
+                <Link href={l.website} target="_blank" underline="none">
+                    {'More information'}
                 </Link>
                 </C.LinkToTheirPage>
            </C.Description>
+           </div>
+        )
+    })
+
+    return (
+        <C.Container>
+            {finalList.length > 0 ? finalList : <p>Loading...</p>}
         </C.Container>
     )
 }
