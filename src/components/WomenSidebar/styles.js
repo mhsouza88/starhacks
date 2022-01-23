@@ -6,7 +6,7 @@ export const Container = styledComponents.div `
     justify-content: center;
     align-items: center;
     width: 40.62rem;
-    margin-left: 3rem;
+    margin-left: 7rem;
 `
 
 export const Avatar = styledComponents.div `

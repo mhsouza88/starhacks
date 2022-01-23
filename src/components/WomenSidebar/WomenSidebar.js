@@ -22,7 +22,7 @@ export const WomenSidebar = (props) => {
                     {list.details}
                 </Typography>
                 <C.LinkToTheirPage>
-                <Link href={list.website} target="_blank" underline="none">
+                <Link href={list.website} color="secondary" target="_blank" underline="none">
                     {'More information'}
                 </Link>
                 </C.LinkToTheirPage>
