@@ -1,10 +1,11 @@
 import HomePage from './pages/HomePage/HomePage'
+import GlobalState from './context/GlobalState'
 
 export const App = () => {
   return(
-    <div>
+    <GlobalState>
       <HomePage />
-    </div>
+    </GlobalState>
   )
 }
 

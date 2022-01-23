@@ -16,7 +16,6 @@ export const Avatar = styledComponents.div `
     
     img {
         border-radius: 10rem;
-        width: 12rem;
     }
 
     @media (max-width: 450px ) {
@@ -46,7 +45,7 @@ export const Description = styledComponents.div `
     flex-direction: column;
     text-align: justify;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 `
 
 export const LinkToTheirPage = styledComponents.div `

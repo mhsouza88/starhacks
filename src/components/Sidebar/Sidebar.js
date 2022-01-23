@@ -19,7 +19,7 @@ export const Sidebar = () => {
             </C.ContainerTitleAndImage>
             <C.Description>
                 <Typography 
-                    variant="h6" 
+                    variant="h5" 
                     gutterBottom 
                     component="div">
                     Join our mailing list!
