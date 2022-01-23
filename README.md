@@ -7,7 +7,7 @@
  </p>
  
  <h2> ⚛️ﾠAbout</h2>
- <p>Group project developed during the <a href="https://www.starhacks.tech/" target="_blank">StarHacks II Hackathon</a>. Despite the gender gap and all obstacles in the technology field, we usually don’t even know the stories of the women pioneers in the computing world. That’s why we created Wired Women, a newsletter that provides users to learn the story of one woman in tech at a time and to empower them in the computing world. Wired Women displays a sample random story of life from a woman in tech, and asks for the user to write an email in order to receive a personalized email with a story of a woman in tech and a picture of her. The JSON file in this project was developed by <a href="https://github.com/kinlane/women-in-tech" target="_blank">Kinlane</a>. 
+ <p>Group project developed during the two days of <a href="https://www.starhacks.tech/" target="_blank">StarHacks II Hackathon</a>. Despite the gender gap and all obstacles in the technology field, we usually don’t even know the stories of the women pioneers in the computing world. That’s why we created Wired Women, a newsletter that provides users to learn the story of one woman in tech at a time and to empower them in the computing world. Wired Women displays a sample random story of life from a woman in tech, and asks for the user to write an email in order to receive a personalized email with a story of a woman in tech and a picture of her. The JSON file in this project was developed by <a href="https://github.com/kinlane/women-in-tech" target="_blank">Kinlane</a>. 
 </p><br/>
  
  
@@ -35,19 +35,21 @@ https://user-images.githubusercontent.com/88038506/150696616-ec99ce17-dfb8-4958-
 
 
 <h2> 🛠️ﾠTechnologies</h2>
-<p> - <a href="https://pt-br.reactjs.org/" target="_blank">React.js</a>: A JavaScript library for building user interfaces.</p>
+<p> - <a href="https://pt-br.reactjs.org/" target="_blank">React.js</a>: a JavaScript library for building user interfaces.</p>
 <p> - <a href="https://mui.com/" target="_blank">Material UI</a>: the world's most popular React UI framework.</p>
-<p> - <a href="https://axios-http.com/docs/intro" target="_blank">Axios</a>: Axios is a promise-based HTTP Client for node.js and the browser.</p>
+<p> - <a href="https://axios-http.com/docs/intro" target="_blank">Axios</a>: axios is a promise-based HTTP Client for node.js and the browser.</p>
 <p> - <a href="https://styled-components.com/" target="_blank">Styled-Components</a>: styled-components lets you write actual CSS in your JavaScript.
 <p> - <a href="https://www.python.org/" target="_blank">Python</a>: a programming language that lets you work quickly
 and integrate systems more effectively.
-  
+<p> - <a href="https://pandas.pydata.org/" target="_blank">pandas</a>: open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.</p>
+<p> - <a href="https://fastapi.tiangolo.com/" target="_blank">FastAPI</a>: a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints.</p>
+<p> - <a href="https://www.twilio.com/sendgrid/email-api" target="_blank">Twilio Sendgrid API</a>: SendGrid provides a cloud-based service that assists businesses with email delivery.</p>
   </p><br/>
 
  
   <h2> 💻ﾠPrerequisites </h2>
 
-Before you start, you'll need to install in your computer the following tools: <a href="https://git-scm.com" target="_blank">Git</a> and <a href="https://nodejs.org/en/" target="_blank">Node.js</a>. Also it's recommended to have an IDE so you can edit the code. We recommend <a href="https://code.visualstudio.com" target="_blank">VSCode</a>.</p><br/>
+Before you start, you'll need to install in your computer the following software: <a href="https://git-scm.com" target="_blank">Git</a> and <a href="https://nodejs.org/en/" target="_blank">Node.js</a>. It's also recommended that you have installed an IDE so you can edit the files. We recommend the <a href="https://code.visualstudio.com" target="_blank">VSCode</a>.</p><br/>
 
   
 
@@ -91,7 +93,7 @@ $ npm run start
       <img src="https://avatars.githubusercontent.com/u/93453406?v=4" width="150px" alt="Clara"/>
       <br />
       <sub><b>Clara</b></sub><br/><br/>
-      <sub><a href="/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-informational?style=for-the-badge&logo=LinkedIn&logoColor=white&color=informational"></a></sub>
+      <sub><a href="https://www.linkedin.com/in/clara-rodriguez-acevedo-b18aa41a8" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-informational?style=for-the-badge&logo=LinkedIn&logoColor=white&color=informational"></a></sub>
       <br />
     </td>
     <td align="center"><a href="https://github.com/mhsouza88" target="_blank">
