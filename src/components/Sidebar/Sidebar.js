@@ -8,7 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import BottomNavigation from '@mui/material/BottomNavigation'
 import BottomNavigationAction from '@mui/material/BottomNavigationAction'
 
-=======
+
 import { styled } from '@mui/system'
 
 const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
@@ -19,85 +19,73 @@ const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
 
 export const Sidebar = () => {
     const [value, setValue] = React.useState(0)
+    const [email, setEmail] = React.useState("")
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        axios.post(url, {
-            email:value
+    const handleSubmit = (evt) => {
+        evt.preventDefault();
+        alert(`Submitting Email ${email}`)
+        fetch(`/members/?email=${email}`)
+        .then(response => response.json())
+        .then((data) => {
+            alert("Success", data)
+        })
+        .catch((error) => {
+            alert(error)
         })
     }
 
     return (
         <C.Container>
             <C.ContainerTitleAndImage>
-            <C.Avatar>
-                <img src={Logo} alt="Logo" title="Logo"/>
-            </C.Avatar>
+                <C.Avatar>
+                    <img src={Logo} alt="Logo" title="Logo"/>
+                </C.Avatar>
             </C.ContainerTitleAndImage>
             <C.Description>
-
                 <Typography
-                    variant="h6"
+                    variant="h5"
                     gutterBottom
-
-                <Typography 
-                    variant="h5" 
-                    gutterBottom 
                     sx={{color: '#2D1656'}}
 
-                    component="div">
+                    component="div" >
                     Join our mailing list!
                 </Typography>
-                </C.Description>
-                <C.MailingList>
-
-                <form>
+            </C.Description>
+            <C.MailingList>
+                <form onSubmit={handleSubmit}>
                     <TextField
                         id="outlined-basic"
+                        color="secondary"
                         label="Your e-mail here"
                         variant="outlined"
                         type="email"
-                        size="small"
+                        style={{"height":"50px", "margin":"5px"}}
+                        sx={{borderColor: '#2D1656' }}
+                        onChange={(e)=>{setEmail(e.target.value)}}
                     />
                     <Button
                         variant="outlined"
-                        type="submit">
+                        color="secondary"
+                        type="submit"
+                        style={{"height":"55px", "margin":"5px"}}
+                        sx={{color: '#2D1656', borderColor: '#2D1656'}}>
                         Submit
                     </Button>
-
-                <form>
-                <TextField
-                    id="outlined-basic" 
-                    color="secondary"
-                    label="Your e-mail here" 
-                    variant="outlined"
-                    type="email"
-                    size="small"
-                    sx={{borderColor: '#2D1656' }}
-                />
-                <Button 
-                    variant="outlined"
-                    color="secondary"
-                    type="submit"
-                    sx={{color: '#2D1656', borderColor: '#2D1656'}}>
-                    Submit
-                </Button>
-
                 </form>
-                </C.MailingList>
-                <C.GithubContainer>
+            </C.MailingList>
+            <C.GithubContainer>
                 <BottomNavigation
-                    color="secondary"
-                    showLabels
-                    value={value}
-                    onChange={(event, newValue) => {
-                        setValue(newValue)
-                    }}
+                        color="secondary"
+                        showLabels
+                        value={value}
+                        onChange={(event, newValue) => {
+                            setValue(newValue)
+                        }}
                 >
-                <BottomNavigationAction sx={{backgroundColor: '#B291F2'}} label="Ana" href="https://github.com/anapsilvestrinf" target="_blank" icon={<GitHubIcon />} />
-                <BottomNavigationAction sx={{backgroundColor: '#B291F2'}} label="Clara" href="https://github.com/bloomwithtech" target="_blank" icon={<GitHubIcon />} />
-                <BottomNavigationAction sx={{backgroundColor: '#B291F2'}} label="Maria" href="https://github.com/mhsouza88/" target="_blank" icon={<GitHubIcon />} />
-            </BottomNavigation>
+                    <BottomNavigationAction sx={{backgroundColor: '#B291F2'}} label="Ana" href="https://github.com/anapsilvestrinf" target="_blank" icon={<GitHubIcon />} />
+                    <BottomNavigationAction sx={{backgroundColor: '#B291F2'}} label="Clara" href="https://github.com/bloomwithtech" target="_blank" icon={<GitHubIcon />} />
+                    <BottomNavigationAction sx={{backgroundColor: '#B291F2'}} label="Maria" href="https://github.com/mhsouza88/" target="_blank" icon={<GitHubIcon />} />
+                </BottomNavigation>
             </C.GithubContainer>
         </C.Container>
     )
