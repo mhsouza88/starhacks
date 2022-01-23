@@ -1,19 +1,16 @@
 import * as C from './styles'
 import WomenSidebar from '../../components/WomenSidebar/WomenSidebar'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import { useContext } from 'react'
-import { GlobalContext } from '../../context/GlobalState'
 
-export const HomePage = () => {
-    const global = useContext(GlobalContext)
+export const HomePage = (props) => {
     return (
         <C.Container>
             <C.WomenSidebarContainer>
                 <WomenSidebar
-                 image_path={global.womenData?.image_path} 
-                 name={global.womenData?.name}
-                 description={global.womenData?.details}
-                 website={global.womenData?.website}
+                    image_path={props.image_path} 
+                    name={props.name}
+                    details={props.details}
+                    website={props.website}
                  />
             </C.WomenSidebarContainer>
             <C.SidebarContainer>
