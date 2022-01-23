@@ -2,17 +2,17 @@ import styledComponents from "styled-components"
 
 export const Container = styledComponents.div `
     display: flex;
+    width: 20.62rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20.62rem;
 `
 
 export const Avatar = styledComponents.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     img {
         border-radius: 10rem;
         width: 15rem;

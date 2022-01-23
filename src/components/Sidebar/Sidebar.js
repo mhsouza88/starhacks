@@ -18,6 +18,7 @@ const IconsAtBottom = styled(BottomNavigationAction)(({ theme }) => ({
 export const Sidebar = () => {
     const [value, setValue] = React.useState(0)
     const [email, setEmail] = React.useState("")
+    const [inputLabel, setInputLabel] = React.useState("Please enter your email")
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
@@ -30,6 +31,7 @@ export const Sidebar = () => {
         .catch((error) => {
             alert(error)
         })
+        setInputLabel("Done!")
     }
 
     return (
@@ -40,33 +42,35 @@ export const Sidebar = () => {
                 </C.Avatar>
             </C.ContainerTitleAndImage>
             <C.Description>
-                <Typography 
-                    variant="h5" 
-                    gutterBottom 
+                <Typography
+                    variant="h5"
+                    gutterBottom
                     sx={{color: '#2D1656'}}
                     component="div">
                     Join our mailing list!
                 </Typography>
                 </C.Description>
+                <p>{inputLabel}</p>
                 <C.MailingList>
                 <form onSubmit={handleSubmit}>
-                <TextField
-                    id="outlined-basic" 
-                    color="secondary"
-                    label="Your e-mail here" 
-                    variant="outlined"
-                    type="email"
-                    size="small"
-                    sx={{borderColor: '#2D1656' }}
-                    onChange={(e)=>{setEmail(e.target.value)}}
-                />
-                <Button 
-                    variant="outlined"
-                    color="secondary"
-                    type="submit"
-                    sx={{color: '#2D1656', borderColor: '#2D1656'}}>
-                    Submit
-                </Button>
+                    <TextField
+                        id="outlined-basic"
+                        color="secondary"
+                        label="Your e-mail here"
+                        variant="outlined"
+                        type="email"
+                        size="small"
+                        sx={{borderColor: '#2D1656' }}
+                        onChange={(e)=>{setEmail(e.target.value)}}
+                    />
+                    <Button
+                        variant="outlined"
+                        color="secondary"
+                        type="submit"
+                        sx={{color: '#2D1656', borderColor: '#2D1656'}}
+                        style={{"height":"35px"}}>
+                        submit
+                    </Button>
                 </form>
             </C.MailingList>
             <C.GithubContainer>
