@@ -84,7 +84,7 @@ $ npm run start
       <img src="https://avatars.githubusercontent.com/u/83748197?v=4" width="150px" alt="Ana Paula Silvestrin"/>
       <br />
       <sub><b>Ana Paula Silvestrin</b></sub><br/><br/>
-      <sub><a href="https://www.linkedin.com/mwlite/in/ana-paula-silvestrin" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-informational?style=for-the-badge&logo=LinkedIn&logoColor=white&color=informational"></a></sub>
+      <sub><a href="https://www.linkedin.com/in/ana-paula-silvestrin/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-informational?style=for-the-badge&logo=LinkedIn&logoColor=white&color=informational"></a></sub>
       <br />
     </td>
     <td align="center"><a href="https://github.com/bloomwithtech" target="_blank">
