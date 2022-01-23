@@ -15,7 +15,7 @@ export const Avatar = styledComponents.div `
     
     img {
         border-radius: 10rem;
-        width: 20rem;
+        width: 15rem;
     }
 
     @media (max-width: 450px ) {
